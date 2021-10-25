@@ -27,7 +27,7 @@
      <string notr="true">background-color: rgb(255, 255, 210);</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page1">
      <widget class="QLabel" name="title_universegy">
@@ -189,6 +189,28 @@ background-color: rgb(217, 247, 255);</string>
       </property>
       <property name="text">
        <string>Войти</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page">
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>60</y>
+        <width>321</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 26pt &quot;Yandex-UI-Icons-Private&quot;;
+background-color: rgb(115, 206, 255);
+color: rgb(82, 82, 122);
+border: 2px solid  rgb(82, 82, 122);
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string>     Регистрация</string>
       </property>
      </widget>
     </widget>
