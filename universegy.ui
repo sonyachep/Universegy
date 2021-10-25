@@ -196,10 +196,10 @@ background-color: rgb(217, 247, 255);</string>
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
-        <x>220</x>
-        <y>60</y>
-        <width>321</width>
-        <height>101</height>
+        <x>260</x>
+        <y>20</y>
+        <width>281</width>
+        <height>81</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -210,8 +210,233 @@ border: 2px solid  rgb(82, 82, 122);
 border-radius: 5px;</string>
       </property>
       <property name="text">
-       <string>     Регистрация</string>
+       <string>   Регистрация</string>
       </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>320</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(214, 214, 214)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>370</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(82, 82, 122);
+font: 15pt &quot;Yandex-UI-Icons-Private&quot;;
+background-color: rgb(217, 247, 255);
+border: 1px solid  rgb(82, 82, 122);
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string> Пароль:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>310</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(82, 82, 122);
+font: 15pt &quot;Yandex-UI-Icons-Private&quot;;
+background-color: rgb(217, 247, 255);
+border: 1px solid  rgb(82, 82, 122);
+border-radius: 5px;
+</string>
+      </property>
+      <property name="text">
+       <string> Логин:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_4">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>380</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(214, 214, 214)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_5">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>140</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(214, 214, 214)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>190</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(82, 82, 122);
+font: 15pt &quot;Yandex-UI-Icons-Private&quot;;
+background-color: rgb(217, 247, 255);
+border: 1px solid  rgb(82, 82, 122);
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string>Фамилия:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>130</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(82, 82, 122);
+font: 15pt &quot;Yandex-UI-Icons-Private&quot;;
+background-color: rgb(217, 247, 255);
+border: 1px solid  rgb(82, 82, 122);
+border-radius: 5px;
+</string>
+      </property>
+      <property name="text">
+       <string> Имя:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_6">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>200</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(214, 214, 214)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>250</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(82, 82, 122);
+font: 15pt &quot;Yandex-UI-Icons-Private&quot;;
+background-color: rgb(217, 247, 255);
+border: 1px solid  rgb(82, 82, 122);
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string>Класс:</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>430</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(82, 82, 122);
+font: 15pt &quot;Yandex-UI-Icons-Private&quot;;
+background-color: rgb(217, 247, 255);
+border: 1px solid  rgb(82, 82, 122);
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string>Учитель?</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="enterance_btn_2">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>430</y>
+        <width>241</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(82, 82, 122);
+font:17pt &quot;Yandex-UI-Icons-Private&quot;;
+background-color: rgb(217, 247, 255);</string>
+      </property>
+      <property name="text">
+       <string>Зарегистрироваться</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>260</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(214, 214, 214)</string>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Какой-то класс 1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Какой-то класс 2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Какой-то класс 3</string>
+       </property>
+      </item>
      </widget>
     </widget>
    </widget>
