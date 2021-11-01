@@ -213,7 +213,7 @@ border-radius: 5px;</string>
        <string>   Регистрация</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="login_edit">
       <property name="geometry">
        <rect>
         <x>180</x>
@@ -267,7 +267,7 @@ border-radius: 5px;
        <string> Логин:</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_4">
+     <widget class="QLineEdit" name="password_edit">
       <property name="geometry">
        <rect>
         <x>190</x>
@@ -280,7 +280,7 @@ border-radius: 5px;
        <string notr="true">background-color: rgb(214, 214, 214)</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_5">
+     <widget class="QLineEdit" name="name_edit">
       <property name="geometry">
        <rect>
         <x>160</x>
@@ -334,7 +334,7 @@ border-radius: 5px;
        <string> Имя:</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_6">
+     <widget class="QLineEdit" name="surname_edit">
       <property name="geometry">
        <rect>
         <x>200</x>
@@ -367,7 +367,7 @@ border-radius: 5px;</string>
        <string>Класс:</string>
       </property>
      </widget>
-     <widget class="QRadioButton" name="radioButton">
+     <widget class="QRadioButton" name="is_teacher">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -387,7 +387,7 @@ border-radius: 5px;</string>
        <string>Учитель?</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="enterance_btn_2">
+     <widget class="QPushButton" name="set_user">
       <property name="geometry">
        <rect>
         <x>530</x>
@@ -405,7 +405,7 @@ background-color: rgb(217, 247, 255);</string>
        <string>Зарегистрироваться</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox">
+     <widget class="QComboBox" name="class_choice">
       <property name="geometry">
        <rect>
         <x>190</x>
