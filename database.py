@@ -15,6 +15,11 @@ class Database:
         self.add_user_data(user_id, login, password, is_teacher)
         self.connect.commit()
 
+    def log_in(self, login, password):
+        all_users = self.cur.execute('''SELECT login, password FROM users_data''').fetchall()
+        print(all_users)
+        return (login, password) in all_users
+
     def add_user(self, name, surname, student_class):
         self.cur.execute('''INSERT INTO users (name, surname, class)
                         VALUES(?, ?, ?)''', (name, surname, student_class))
@@ -58,28 +63,26 @@ class Tasks:
         self.db = Database()
 
     def get_all(self):
-        data = self.db.cur.execute('''SELECT * FROM tasks''').fetchall()
-        new_data = []
-        for elem in data:
-            id, task_text, block, is_test = elem
-            new_data.append((id, task_text, block, bool(is_test)))
-        return new_data
+        return self.db.cur.execute('''SELECT * FROM tasks''').fetchall()
 
     def get_task(self, task_id):
-        id, task_text, block, is_test = self.db.cur.execute('''SELECT * FROM tasks 
+        id, task_text, answer, block = self.db.cur.execute('''SELECT * FROM tasks 
         WHERE task_id = ?''', (task_id,)).fetchall()[0]
-        return id, task_text, block, bool(is_test)
+        return id, task_text, answer, block
 
     def get_block(self, block):
-        return self.db.cur.execute('''SELECT * FROM tasks WHERE block = ?''', (block,)).fetchall()[0]
+        data = self.db.cur.execute('''SELECT * FROM tasks WHERE block = ?''', (block,)).fetchall()
+        new_data = []
+        for elem in data:
+            id, task_text, answer, block = elem
+            new_data.append((id, task_text, answer))
+        return new_data
 
-    def get_tests(self):
-        return self.db.cur.execute('''SELECT * FROM tasks WHERE is_test = true''').fetchall()[0]
 
-# task = Tasks()
-# print(task.get_all())
-# print(task.get_task(2))
-# print(task.get_tests())
+task = Tasks()
+print(task.get_all())
+print(task.get_task(2))
+print(task.get_block(1))
 
 # user_data = Users_data()
 # print(user_data.get_all())
