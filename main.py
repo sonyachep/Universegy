@@ -1,6 +1,6 @@
 import sys
 
-from PyQt5 import uic  # Импортируем uic
+from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 from database import *
@@ -82,7 +82,6 @@ class Universegy(QMainWindow):
                         }
         self.task_number = 0
 
-
         self.run_to_page1()
         self.back_to_main_from_login.clicked.connect(self.run_to_page1)
         self.back_to_main_from_registration.clicked.connect(self.run_to_page1)
@@ -99,11 +98,13 @@ class Universegy(QMainWindow):
 
         self.set_user.clicked.connect(self.registrate)
 
-        self.block1_task_choices.currentTextChanged.connect(self.show_tasks)
+        self.block_task_choices.currentTextChanged.connect(self.show_tasks)
         self.write_answer.clicked.connect(self.write_current_answer)
         self.end_test.clicked.connect(self.check_answer)
 
     def run_to_page1(self):
+        self.current_user = 0
+        self.logged = False
         self.stackedWidget.setCurrentIndex(0)
 
     def run_to_page2(self):
@@ -125,6 +126,9 @@ class Universegy(QMainWindow):
     def run_to_page4(self):
         if self.logged:
             blocks_done = str(self.users.get_blocks(self.current_user))
+            self.done_1.setText('Не выполнено')
+            self.done_2.setText('Не выполнено')
+            self.done_3.setText('Не выполнено')
             if '1' in blocks_done:
                 self.done_1.setText('Выполнено')
             if '2' in blocks_done:
@@ -137,6 +141,8 @@ class Universegy(QMainWindow):
             self.run_to_page1()
 
     def run_to_page5(self):
+        self.task_view.setText('')
+        self.block_task_choices.setCurrentIndex(0)
         block = self.sender().text()
         blocks_done = str(self.users.get_blocks(self.current_user))
         if block == 'Округление целых чисел':
@@ -154,7 +160,6 @@ class Universegy(QMainWindow):
             if str(self.block) in blocks_done:
                 return
             self.stackedWidget.setCurrentIndex(4)
-
 
     def run_to_page6(self):
         self.stackedWidget.setCurrentIndex(5)
@@ -180,7 +185,10 @@ class Universegy(QMainWindow):
         self.registrationerror_label.setText(error)
 
     def show_tasks(self):
-        self.task_number = int(self.sender().currentText())
+        try:
+            self.task_number = int(self.sender().currentText())
+        except ValueError:
+            return
         tasks = self.tasks.get_block(self.block)
         for elem in tasks:
             id, text, answer = elem
@@ -207,7 +215,6 @@ class Universegy(QMainWindow):
                 id = 20
             id_wrong, task_text, right_answer, block = self.tasks.get_task(id + (20 * (self.block - 1)))
 
-
             if student_answer == str(right_answer):
                 if len(f'{id}: +') < 5:
                     score += f'{id}:  +\n'
@@ -228,7 +235,6 @@ class Universegy(QMainWindow):
         print(blocks_done)
         blocks_done += str(self.block)
         self.db.add_block_to_user(self.current_user, blocks_done)
-
 
 
 def except_hook(cls, exception, traceback):

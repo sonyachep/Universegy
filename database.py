@@ -110,15 +110,3 @@ class Tasks:
             id, task_text, answer, block = elem
             new_data.append((id, task_text, answer))
         return new_data
-
-
-task = Tasks()
-print(task.get_all())
-print(task.get_task(2))
-print(task.get_block(1))
-
-# user_data = Users_data()
-# print(user_data.get_all())
-#
-# print(user_data.get_user_data(1))
-# print(user_data.get_user_data(2))

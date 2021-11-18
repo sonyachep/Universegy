@@ -27,7 +27,7 @@
      <string notr="true">background-color: rgb(255, 255, 210);</string>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="page_1">
      <widget class="QLabel" name="title_universegy">
@@ -63,7 +63,8 @@ background-color: rgb(217, 247, 255);</string>
          <property name="styleSheet">
           <string notr="true">font: 26pt &quot;Yandex-UI-Icons-Private&quot;;
 background-color: rgb(115, 206, 255);
-color: rgb(82, 82, 122);</string>
+color: rgb(82, 82, 122);
+cursor: pointer;</string>
          </property>
          <property name="text">
           <string>Вход</string>
@@ -614,7 +615,7 @@ color: rgb(82, 82, 122);</string>
 color: rgb(82, 82, 122);</string>
       </property>
       <property name="text">
-       <string>Не выполнено</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Не выполнено&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QLabel" name="done_1">
@@ -631,7 +632,7 @@ color: rgb(82, 82, 122);</string>
 color: rgb(82, 82, 122);</string>
       </property>
       <property name="text">
-       <string>Не выполнено</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Не выполнено&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QLabel" name="done_3">
@@ -648,7 +649,7 @@ color: rgb(82, 82, 122);</string>
 color: rgb(82, 82, 122);</string>
       </property>
       <property name="text">
-       <string>Не выполнено</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Не выполнено&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QPushButton" name="logout">
@@ -685,7 +686,7 @@ background-color: rgb(217, 247, 255);</string>
 background-color: rgb(214, 214, 214)</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="block1_task_choices">
+     <widget class="QComboBox" name="block_task_choices">
       <property name="geometry">
        <rect>
         <x>190</x>
