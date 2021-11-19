@@ -9,7 +9,7 @@ class Database:
         self.connect = sqlite3.connect(DATABASE)
         self.cur = self.connect.cursor()
 
-    def registration(self, name, surname, student_class, login, password, is_teacher):
+    def registration(self, name, surname, student_class, login, password):
         try:
             logins = self.cur.execute('''SELECT login FROM users_data''').fetchall()[0][0]
             if login in logins:
@@ -20,7 +20,7 @@ class Database:
             self.connect.commit()
             user_id = self.cur.execute('''SELECT id FROM users WHERE name = ?''', (name,)).fetchall()[0][0]
 
-            self.add_user_data(user_id, login, password, is_teacher)
+            self.add_user_data(user_id, login, password)
             self.connect.commit()
         except LoginAlreadyExists:
             return 'Логин занят'
@@ -45,9 +45,9 @@ class Database:
         self.cur.execute('''INSERT INTO users (name, surname, class, blocks_done)
                         VALUES(?, ?, ?, ?)''', (name, surname, student_class, ''))
 
-    def add_user_data(self, user_id, login, password, is_teacher):
-        self.cur.execute('''INSERT INTO users_data (user_id, login, password, rights)
-                                        VALUES(?, ?, ?, ?)''', (user_id, login, password, is_teacher))
+    def add_user_data(self, user_id, login, password):
+        self.cur.execute('''INSERT INTO users_data (user_id, login, password)
+                                        VALUES(?, ?, ?)''', (user_id, login, password))
 
     def add_relation(self, user_id, task_id):
         print(user_id, task_id)
@@ -81,14 +81,14 @@ class Users_data:
         data = self.db.cur.execute('''SELECT * FROM users_data''').fetchall()
         new_data = []
         for elem in data:
-            id, login, password, rights = elem
-            new_data.append((id, login, password, bool(rights)))
+            id, login, password = elem
+            new_data.append((id, login, password))
         return new_data
 
     def get_user_data(self, user_id):
-        id, login, password, rights = self.db.cur.execute('''SELECT * FROM users_data 
+        id, login, password = self.db.cur.execute('''SELECT * FROM users_data 
         WHERE user_id = ?''', (user_id,)).fetchall()[0]
-        return id, login, password, bool(rights)
+        return id, login, password
 
 
 class Tasks:

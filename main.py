@@ -122,7 +122,6 @@ class Universegy(QMainWindow):
         self.login_edit.setText('')
         self.password_edit.setText('')
         self.registrationerror_label.setText('')
-        self.is_teacher.setCheckState(False)
         self.stackedWidget.setCurrentIndex(2)
 
     def run_to_page4(self):
@@ -180,8 +179,7 @@ class Universegy(QMainWindow):
         student_class = self.class_choice.currentText()
         login = self.login_edit.text()
         password = self.password_edit.text()
-        is_teacher = int(self.is_teacher.checkState())
-        error = self.db.registration(name, surname, student_class, login, password, is_teacher)
+        error = self.db.registration(name, surname, student_class, login, password)
         if not error:
             self.run_to_page1()
         self.registrationerror_label.setText(error)
@@ -191,6 +189,14 @@ class Universegy(QMainWindow):
             self.task_number = int(self.sender().currentText())
         except ValueError:
             return
+        if not self.answers[self.block][self.task_number]:
+            self.write_answer.show()
+            self.answer_edit.show()
+            self.answer_label.show()
+        else:
+            self.write_answer.hide()
+            self.answer_edit.hide()
+            self.answer_label.hide()
         tasks = self.tasks.get_block(self.block)
         for elem in tasks:
             id, text, answer = elem
@@ -204,13 +210,15 @@ class Universegy(QMainWindow):
     def write_current_answer(self):
         answer = self.answer_edit.text()
         self.answers[self.block][self.task_number] = answer
+        self.write_answer.hide()
+        self.answer_edit.hide()
+        self.answer_label.hide()
         self.answer_edit.setText('')
 
     def check_answer(self):
         score = ''
         total = 0
         answers = self.answers[self.block]
-        print(answers)
         for id, student_answer in answers.items():
             id = id % 20
             if id == 0:
@@ -234,7 +242,6 @@ class Universegy(QMainWindow):
         self.result_view.setText(result)
         self.answer_view.setText(score)
         blocks_done = self.users.get_blocks(self.current_user)
-        print(blocks_done)
         blocks_done += str(self.block)
         self.db.add_block_to_user(self.current_user, blocks_done)
 

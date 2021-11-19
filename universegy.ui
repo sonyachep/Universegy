@@ -525,26 +525,6 @@ background-color: rgb(217, 247, 255);</string>
 главную</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="is_teacher">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>430</y>
-        <width>101</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(82, 82, 122);
-font: 15pt &quot;Yandex-UI-Icons-Private&quot;;
-background-color: rgb(217, 247, 255);
-border: 1px solid  rgb(82, 82, 122);
-border-radius: 5px;</string>
-      </property>
-      <property name="text">
-       <string>Учитель</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="page_4">
      <widget class="QPushButton" name="integer_round">
@@ -857,7 +837,7 @@ border-radius: 5px;</string>
        <string>Номер задания:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_11">
+     <widget class="QLabel" name="answer_label">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -878,6 +858,9 @@ border-radius: 5px;</string>
       </property>
      </widget>
      <widget class="QPushButton" name="write_answer">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>500</x>
