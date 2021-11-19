@@ -17,7 +17,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../viezd" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
@@ -105,26 +105,26 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="462" y="113" key="FileChooserDialogImpl" timestamp="1637134224065">
+    <state x="462" y="113" key="FileChooserDialogImpl" timestamp="1637296222897">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="462" y="113" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1637134224065" />
-    <state width="1345" height="169" key="GridCell.Tab.0.bottom" timestamp="1637253849870">
+    <state x="462" y="113" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1637296222897" />
+    <state width="1345" height="169" key="GridCell.Tab.0.bottom" timestamp="1637311111768">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state width="1345" height="169" key="GridCell.Tab.0.bottom/0.0.1366.720@0.0.1366.720" timestamp="1637253849870" />
-    <state width="1345" height="169" key="GridCell.Tab.0.center" timestamp="1637253849870">
+    <state width="1345" height="169" key="GridCell.Tab.0.bottom/0.0.1366.720@0.0.1366.720" timestamp="1637311111768" />
+    <state width="1345" height="169" key="GridCell.Tab.0.center" timestamp="1637311111768">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state width="1345" height="169" key="GridCell.Tab.0.center/0.0.1366.720@0.0.1366.720" timestamp="1637253849870" />
-    <state width="1345" height="169" key="GridCell.Tab.0.left" timestamp="1637253849870">
+    <state width="1345" height="169" key="GridCell.Tab.0.center/0.0.1366.720@0.0.1366.720" timestamp="1637311111768" />
+    <state width="1345" height="169" key="GridCell.Tab.0.left" timestamp="1637311111768">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state width="1345" height="169" key="GridCell.Tab.0.left/0.0.1366.720@0.0.1366.720" timestamp="1637253849870" />
-    <state width="1345" height="169" key="GridCell.Tab.0.right" timestamp="1637253849870">
+    <state width="1345" height="169" key="GridCell.Tab.0.left/0.0.1366.720@0.0.1366.720" timestamp="1637311111768" />
+    <state width="1345" height="169" key="GridCell.Tab.0.right" timestamp="1637311111768">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state width="1345" height="169" key="GridCell.Tab.0.right/0.0.1366.720@0.0.1366.720" timestamp="1637253849870" />
+    <state width="1345" height="169" key="GridCell.Tab.0.right/0.0.1366.720@0.0.1366.720" timestamp="1637311111768" />
     <state width="1343" height="156" key="GridCell.Tab.1.bottom" timestamp="1636440110653">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
@@ -155,7 +155,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>127</line>
+          <line>129</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

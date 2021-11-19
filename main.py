@@ -14,6 +14,8 @@ class Universegy(QMainWindow):
 
         super().__init__()
         uic.loadUi('universegy.ui', self)
+        self.setWindowTitle('Universegy')
+
         self.logged = False
         self.current_user = 0
         self.block = 0
